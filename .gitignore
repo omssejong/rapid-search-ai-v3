@@ -6,5 +6,5 @@ __pycache__
 *bk.py
 *.so
 *.pyi
-test_json/
+*.json
 *.mp4
