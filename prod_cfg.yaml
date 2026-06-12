@@ -1,0 +1,75 @@
+model_path:
+  person_detect: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/equipment_ver1_l_ver1_515_250409_480x640_fp16_b8.engine"
+  person_analysis: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/verifyperson_model_128x64_fp16_b32.engine"
+  person_analysis_onnx: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/verifyperson_model_128x64_dynamic.onnx"
+  attribute_detect: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/equipment_ver1_l_ver1_515_250409_480x640_fp16_b8.engine"
+  attribute_analysis: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/convformer_s36_sail_in22k_ft_in1k_224_fp16_b16.engine"
+  plate_detect: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/yolov5_l6_1280_platedetect_768x1280_fp16_b8.engine"
+  #single_plate_detect: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/yolov5_l6_1280_platedetect.engine"
+  plate_ocr_analysis: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/plate_ocr_60x190_fp16_b32.engine"
+  face_detect: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/result/trt/face_detect/model_fp16.engine"
+  face_full_analysis: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/result/trt/face_verify/model_fp16.engine"
+  face_half_analysis: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/result/trt/face_half_verify/model_fp16.engine"
+  area_detect: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/result/trt/segment/yolov5l_seg.engine"
+  #head_detect: "/opt/oms/omeye/omeye-hss/build-cache/omeye-hss-app/opt/oms/omeye/ai/engine_gen/engines/head_ver2_l6_6_conf0.339.engine"
+
+type:
+  person:
+    iou_thresh: 0.7
+    conf_thresh: 0.7
+    cls_list: [0]
+    match_score_thresh: 0.5
+    crop_resize: [128, 64]
+    min_crop_size: [24, 12] # h,w
+    batch_size: 4
+  attribute:
+    iou_thresh: 0.7
+    conf_thresh: 0.7
+    cls_list: [0]
+    match_score_thresh: 0.5 # 정답 속성 판단
+    match_attr_avg_score_thresh: 0.6 # 객체 후보 판단
+    match_color_filter_thresh: 0.3 # 색상으로 객체 후보 필터링
+    crop_resize: [224, 224]
+    min_crop_size: [24, 12] # h,w
+    batch_size: 8
+  carplate:
+    iou_thresh: 0.7
+    conf_thresh: 0.5
+    cls_list: [0]
+    crop_resize: [60, 190]
+    min_crop_size: [12, 38] # h,w
+    batch_size: 32
+  face:
+    iou_thresh: 0.7
+    conf_thresh: 0.95
+    match_score_thresh: 0.5
+  area:
+    iou_thresh: 0.7
+    conf_thresh: 0.5
+  head:
+    iou_thresh: 0.7
+    conf_thresh: 0.7
+    cls_list: [0]
+
+yolo:
+  stride: 32
+  max_det: 1000
+  iou_thresh: 0.5
+  conf_thresh: 0.5
+  batch_size: 4
+
+
+image_size:
+  person_frame: [480, 640]
+  area_frame: [480, 640]
+  plate_frame: [768, 1280]
+  head_frame: [768, 1280]
+  face_frame: [1080, 1920]
+  origin_frame: [1080, 1920]
+
+etc_info:
+  carLPLModelNameString: '0123456789다너무머가노러우소사버루아두오도바고나주로어라수허자부조거모누서마보더구저배차카타파육호'
+
+log:
+  log_enable: True
+  log_root_dir: "/opt/oms/omeye/log/ai"
