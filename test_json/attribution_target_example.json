@@ -1,0 +1,43 @@
+{
+    "cameraIds": [
+        79542
+    ],
+    "count": 6,
+    "fps": 1,
+    "objectList": [
+        {
+            "attrParam": {
+                "bottom": {
+                "color": null,
+                "pattern": null,
+                "type": null
+                },
+                "etc": {
+                "bag": "backpack",
+                "glasses": "glasses",
+                "mask": "mask",
+                "walkingaids": null
+                },
+                "general": {
+                "gender": "male",
+                "hair": null
+                },
+                "inner": null,
+                "outer": {
+                "color": null,
+                "pattern": null,
+                "shape": null,
+                "type": null
+                },
+                "shoes": null
+            },
+            "id": 4010
+        }
+    ],
+    "rank": 20,
+    "streamType": "VIDEO",
+    "timeGroupIds": [
+        7923
+    ],
+    "type": "ATTRIBUTION"
+}

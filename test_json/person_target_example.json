@@ -1,0 +1,19 @@
+{
+    "cameraIds": [
+        79543
+    ],
+    "count": 6,
+    "fps": 1,
+    "objectList": [
+        {
+            "id": 4028,
+            "imagePath": "./test_images/person_crop/crop_000044_001_0.6539598703384399.jpg"
+        }
+    ],
+    "rank": 20,
+    "streamType": "VIDEO",
+    "timeGroupIds": [
+        7924
+    ],
+    "type": "PERSON"
+}

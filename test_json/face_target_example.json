@@ -1,0 +1,20 @@
+{
+    "cameraIds": [
+        79543
+    ],
+    "count": 6,
+    "fps": 1,
+    "objectList": [
+        {
+            "id": 2111,
+            "imagePath": "./test_images/1860.jpg",
+            "mask": false
+        }
+    ],
+    "rank": 20,
+    "streamType": "VIDEO",
+    "timeGroupIds": [
+        7924
+    ],
+    "type": "FACE"
+}

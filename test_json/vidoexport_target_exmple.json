@@ -1,0 +1,15 @@
+
+{
+    "count": 1,
+    "options": {
+        "areaInfoImg": "영역 이미지",
+        "description": "",
+        "masking": [
+            "area",
+            "head",
+            "carplate"
+        ],
+        "password": "1234"
+    },
+    "type": "EXPORTVIDEO"
+}

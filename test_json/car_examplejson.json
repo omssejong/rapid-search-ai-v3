@@ -1,0 +1,31 @@
+{
+    "cameraIds": [
+        79544
+    ],
+    "count": 1,
+    "fps": 5,
+    "objectList": [
+        {
+            "id": 4032,
+            "ocr": "**02"
+        },
+        {
+            "id": 4033,
+            "ocr": "5449"
+        },
+        {
+            "id": 4034,
+            "ocr": "58**"
+        },
+        {
+            "id": 4035,
+            "ocr": "61**"
+        }
+    ],
+    "rank": 20,
+    "streamType": "VIDEO",
+    "timeGroupIds": [
+        7925
+    ],
+    "type": "CARPLATE"
+}

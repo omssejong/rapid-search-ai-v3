@@ -1,0 +1,10 @@
+__pycache__
+.bk
+*.jpg
+*.png
+*.mp4
+*bk.py
+*.so
+*.pyi
+*.json
+*.mp4
